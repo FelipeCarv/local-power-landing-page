@@ -1,0 +1,172 @@
+
+//============================= INTRODUCAO =============================
+#introducao{
+   
+    .introducao{
+        
+        .grid1{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .chamada-page{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+    
+                .img-logo{
+                    max-width: 284px;
+                    margin-bottom: 32px;
+                }
+    
+                .info-chamada{
+                    max-width: 515px;
+    
+                    h1{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 48px;
+                        line-height: 72px;
+                        color: #040404;
+                        text-transform: uppercase;
+                        margin-bottom: 24px;
+                        position: relative;
+    
+                        &::before{
+                            content: '';
+                            background: url(/assets/img/img-local-power/detalhe-chamada.svg);
+                            display: block;
+                            width: 31px;
+                            height: 35px;
+                            position: absolute;
+                            bottom: 120px;
+                            left: -20px;
+                        }
+                        
+                        span{
+                            color:  #F16522;
+                        }
+                    }
+    
+                    p{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 27px;
+                        color: #040404;
+                        margin-bottom: 24px;
+                    }
+    
+                    h4{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 27px;
+                        color: #040404;
+    
+                        span{
+                            color:  #F16522;
+                        }
+                    }
+                }
+            }
+
+            .btn-orcamento{
+                background: #F16522;
+                border-radius: 138px;
+                padding: 14px 24px;
+                color: #FFFFFF;    
+                position: absolute;
+                bottom: 30px;
+                left: 565px;
+            }
+        }
+
+        .grid2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 660px;
+
+                .chamada-form{
+                    margin-bottom: 40px;
+
+                    .titulo{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        h2{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 32px;
+                            line-height: 48px;
+                            text-align: center;
+                            color: #040404;
+                            margin-bottom: 8px;
+                        }
+    
+                        p{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 24px;
+                            text-align: center;
+                            color: #F16522;
+                            
+
+                            span{
+                                color: #040404;
+                            }
+                        }
+                    }
+                    
+                    p{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #040404;
+                        max-width: 390px;
+                    }
+                   
+                }
+
+                form{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 24px;
+
+                    .conteudo-form{
+                       
+                    }
+
+                    input{
+                        background: #F1F3F5;
+                        border-radius: 28px;
+                        border: none;
+                        padding: 10px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

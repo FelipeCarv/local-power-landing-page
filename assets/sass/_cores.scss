@@ -1,0 +1,27 @@
+body {
+    --cor-branco: #ffffff;
+    --cor-primary: #DBCD00;
+    --cor-c1: #FDFCF2;
+    --cor-c2: #FBFAE5;
+    --cor-c3: #F8F5CC;
+    --cor-c4: #F4F0B3;
+    --cor-c6: #F1EB99;
+    --cor-c7: #EDE680;
+    --cor-c8: #E9E166;
+    --cor-c9: #E6DC4D;
+    --cor-c10: #DBCD00;
+    --cor-c11: #585200;
+}
+
+$cor-branco:#{var(--cor-branco)};
+$cor-primary:#{var(--cor-primary)};
+$cor-c1:#{var(--cor-c1)};
+$cor-c2:#{var(--cor-c2)};
+$cor-c3:#{var(--cor-c3)};
+$cor-c4:#{var(--cor-c4)};
+$cor-c6:#{var(--cor-c6)};
+$cor-c7:#{var(--cor-c7)};
+$cor-c8:#{var(--cor-c8)};
+$cor-c9:#{var(--cor-c9)};
+$cor-c10:#{var(--cor-c10)};
+$cor-c11:#{var(--cor-c11)}; 
