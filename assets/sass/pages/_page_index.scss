@@ -132,12 +132,25 @@
                 padding: 14px 24px;
                 color: #FFFFFF;    
                 position: absolute;
-                bottom: 1.875rem;
+                bottom: 30px;
                 left: 50%;
                 transform: translateX(-50%);
+                min-width: 220px;
+                font-size: 15px;
+                text-align: center;
+
+                @include d(mx){
+                    bottom: -20%;
+                }
                 @include d(m){
-                    display: none;
-                 }
+                    bottom: -80%;
+                }
+                @include d(t){
+                    bottom: -80%;
+                }
+                @include d(s){
+                    bottom: -70%;
+                }
             }
         }
 
