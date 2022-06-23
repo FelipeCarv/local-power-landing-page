@@ -11,41 +11,68 @@
             align-items: center;
             position: relative;
 
+            @include d(m){
+                display: block;
+                margin-bottom: 20px;
+            }
+          
             .chamada-page{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                
-    
+                margin-left: 50px;
+                margin-right: 50px;
+                @include d(s){
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
                 .img-logo{
-                    max-width: 284px;
-                    margin-bottom: 32px;
+                    max-width: 17.75rem;
+                    margin-bottom: 2rem;
                 }
     
                 .info-chamada{
-                    max-width: 515px;
-    
+                    max-width: 32.1875rem;
+
+                    @include d(m){
+                        margin-left: 10px;
+                    }
                     h1{
                         font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 600;
-                        font-size: 48px;
+                        font-size: 3rem;
                         line-height: 72px;
                         color: #040404;
                         text-transform: uppercase;
                         margin-bottom: 24px;
                         position: relative;
-    
+                        @include d(mx){
+                            line-height: 40px;
+                            font-size: 2rem;
+                        }
+
+                       
+
                         &::before{
                             content: '';
                             background: url(/assets/img/img-local-power/detalhe-chamada.svg);
                             display: block;
-                            width: 31px;
-                            height: 35px;
+                            width: 1.9375rem;
+                            height: 2.1875rem;
                             position: absolute;
-                            bottom: 120px;
-                            left: -20px;
+                            bottom: 7.5rem;
+                            left: -1.25rem;
+                            @include d(mx){
+                                bottom: 3.75rem;
+                                left: -1.25rem;
+                            }
+
+                            @include d(s){
+                                display: none;
+                            }
+                            
                         }
                         
                         span{
@@ -57,24 +84,45 @@
                         font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 500;
-                        font-size: 18px;
+                        font-size: 1.125rem;
                         line-height: 27px;
                         color: #040404;
-                        margin-bottom: 24px;
+                        margin-bottom: 1.5rem;
+
+                        @include d(mx){
+                            font-size: 1rem;
+                        }
+                        @include d(m){
+                            font-size: 14px;
+                        }
                     }
     
                     h4{
                         font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 500;
-                        font-size: 18px;
+                        font-size: 1.125rem;
                         line-height: 27px;
                         color: #040404;
     
                         span{
                             color:  #F16522;
                         }
+
+                        @include d(mx){
+                            font-size: 1rem;
+                        }
+
+                        @include d(m){
+                            font-size: 14px;
+                        }
                     }
+                }
+            }
+
+            .img-bg-inicial{
+                @include d(m){
+                    display: none;
                 }
             }
 
@@ -84,8 +132,21 @@
                 padding: 14px 24px;
                 color: #FFFFFF;    
                 position: absolute;
-                bottom: 30px;
-                left: 565px;
+                bottom: 1.875rem;
+                left: 50%;
+                transform: translateX(-50%);
+                @include d(m){
+                    display: none;
+                 }
+            }
+        }
+
+        .bg-mobile{
+            display: none;
+
+            @include d(mm){
+                display: flex;
+                margin-bottom: 40px;
             }
         }
 
@@ -96,40 +157,60 @@
             align-items: center;
             position: relative;
 
-            .form{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                max-width: 660px;
 
+            @include d(m){
+                display: block;
+            }
+
+            .img-bg-segundo{
+                @include d(m){
+                    display: none;
+                }
+            }
+
+            .form{
+                margin-left: 3.125rem;
+                margin-right: 3.125rem;
+                
+                @include d(m){
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                }
                 .chamada-form{
-                    margin-bottom: 40px;
+                    margin-bottom: 2.5rem;
+                    max-width: 660px;
 
                     .titulo{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-
+                        @include d(s){
+                            flex-direction: column;
+                        }
                         h2{
                             font-family: 'Poppins';
                             font-style: normal;
                             font-weight: 600;
-                            font-size: 32px;
+                            font-size: 2rem;
                             line-height: 48px;
                             text-align: center;
                             color: #040404;
                             margin-bottom: 8px;
+                            @include d(s){
+                                font-size: 24px;
+                            }
                         }
     
                         p{
                             font-family: 'Poppins';
                             font-style: normal;
                             font-weight: 600;
-                            font-size: 16px;
+                            font-size: 1rem;
                             line-height: 24px;
                             text-align: center;
                             color: #F16522;
-                            
+                           
 
                             span{
                                 color: #040404;
@@ -141,10 +222,13 @@
                         font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 16px;
+                        font-size: 1rem;
                         line-height: 24px;
                         color: #040404;
                         max-width: 390px;
+                        @include d(s){
+                            text-align: center;
+                        }
                     }
                    
                 }
@@ -153,16 +237,109 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 24px;
+                    max-width: 660px;
+                    
+                    @include d(s){
+                        grid-template-columns: 1fr;
+                    }
+
+                    .grid-tp-1{
+                        grid-column: 1/-1;
+                    }
 
                     .conteudo-form{
+                       max-width: 320px;
                        
+                        @include d(s){
+                            max-width: none;
+                        }
                     }
 
                     input{
                         background: #F1F3F5;
                         border-radius: 28px;
                         border: none;
-                        padding: 10px;
+                        padding: 16px 24px;
+                        width: 100%;
+
+
+                        &::placeholder{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            line-height: 24px;
+                            color: rgba(4, 4, 4, 0.6);
+                        }
+                    }
+
+                    .select{
+                        background: #F1F3F5;
+                        border-radius: 28px;
+                        border: none;
+                        padding: 12px 24px;
+                        width: 100%;
+
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        line-height: 24px;
+                        color: rgba(4, 4, 4, 0.6);
+
+                        background-image: url(/assets/img/img-local-power/arrow-down-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: center right 25px;
+                    }
+
+                    .btn-anexo{
+                        background: #F1F3F5;
+                        border-radius: 28px;
+                        border: none;
+                        padding: 16px 24px;
+                        width: 100%;
+                        text-align: center;
+
+                        background-image: url(/assets/img/img-local-power/icon-message.svg);
+                        background-repeat: no-repeat;
+                        background-position: left 30% center;
+                        @include d(mx){
+                            background-position: left 20% center;
+                        }
+                        @include d(m){
+                            background-position: left 10% center;
+                        }
+                       
+                        @include d(s){
+                            background-image:none;
+                        }
+                        
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        line-height: 24px;
+                        color: rgba(4, 4, 4, 0.6);
+                        
+                    }
+
+                    .btn-enviar{
+                        background: #F16522;
+                        border-radius: 28px;
+                        border: none;
+                        padding: 16px 24px;
+                        width: 100%;
+                        text-align: center;
+                        color: #FFFFFF;
+
+                    
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                            
                         
                     }
                 }
@@ -170,3 +347,4 @@
         }
     }
 }
+
