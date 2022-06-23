@@ -3,14 +3,14 @@
 #introducao{
    
     .introducao{
-        
+
         .grid1{
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-content: space-between;
             align-items: center;
             position: relative;
-
+            
             @include d(m){
                 display: block;
                 margin-bottom: 20px;
