@@ -1,16 +1,19 @@
 
 //============================= INTRODUCAO =============================
 #introducao{
-   
-    .introducao{
+    height: 100vh; 
 
+    .introducao{
+        height: 100%;
+        
         .grid1{
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-content: space-between;
             align-items: center;
             position: relative;
-            
+            height: 100%;
+           
             @include d(m){
                 display: block;
                 margin-bottom: 20px;
@@ -121,36 +124,44 @@
             }
 
             .img-bg-inicial{
+                height: 100%;
+                img{
+                    object-fit: cover;
+                    height: 100vh;
+                    width: 100%;
+                }
                 @include d(m){
                     display: none;
                 }
             }
 
-            .btn-orcamento{
-                background: #F16522;
-                border-radius: 138px;
-                padding: 14px 24px;
-                color: #FFFFFF;    
-                position: absolute;
-                bottom: 30px;
-                left: 50%;
-                transform: translateX(-50%);
-                min-width: 220px;
-                font-size: 15px;
-                text-align: center;
+            
+        }
 
-                @include d(mx){
-                    bottom: -20%;
-                }
-                @include d(m){
-                    bottom: -80%;
-                }
-                @include d(t){
-                    bottom: -80%;
-                }
-                @include d(s){
-                    bottom: -70%;
-                }
+        .btn-orcamento{
+            background: #F16522;
+            border-radius: 138px;
+            padding: 14px 24px;
+            color: #FFFFFF;    
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 220px;
+            font-size: 15px;
+            text-align: center;
+
+            @include d(mx){
+                bottom: -20%;
+            }
+            @include d(m){
+                bottom: -80%;
+            }
+            @include d(t){
+                bottom: -80%;
+            }
+            @include d(s){
+                bottom: -70%;
             }
         }
 
